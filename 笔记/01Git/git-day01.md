@@ -59,13 +59,15 @@ git config --user.name 用户名[自定义]
 git config --user.email 用户邮箱[自定义]
 ```
 
-#### 4.1 本地仓库相关
+#### 4.1 基础命令
 
 * 初始化本地仓库：`git init`
 
 * 添加到暂存区：`git add 文件名`
 
 * 提交到本地仓库：`git commit -m "提示消息" 文件名`
+
+  <font color=red>**只有提交到本地仓库后，才会生成唯一的历史版本**</font>
 
 * 查看本地仓库状态：`git status`
 
@@ -76,6 +78,23 @@ git config --user.email 用户邮箱[自定义]
 * 查看历史版本：`git reflog`
 
 * 版本穿梭：`git reset --hard 历史版本号`
+
+#### 4.2 分支命令
+
+* 创建分支：`git branch 分支名`
+
+* 查看分支：`git branch -v`
+
+* 切换分支：`git checkout 分支名`
+
+* 合并分支：`git merge 分支名`
+
+  <font color=red>**注意：在合并之前首先要切换到合并到的分支，然后再执行合并分支的命令**</font>
+
+* 合并冲突问题解决方案
+
+  * 第1步：手动编辑有冲突的文件；
+  * 第2步：添加到暂存区，并提交到本地仓库[<font color=red>**提交到本地仓库时commit命令不能加文件名**</font>]。
 
 
 
