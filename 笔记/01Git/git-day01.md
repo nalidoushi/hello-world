@@ -111,10 +111,8 @@ git config --user.email 用户邮箱[自定义]
 - 清屏：`Ctrl + l`
 - 自动补全：`命令关键字 + Tab键`  <font color=red>**能使用自动补全的坚决杜绝手写！**</font>
 - 字体放大缩小：`Ctrl` + 鼠标滚轮
-
-
-
-
+- 粘贴: `Shift + Insert`
+- 终止当前命令执行: `Ctrl + c`
 
 
 
