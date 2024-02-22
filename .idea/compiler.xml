@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="_02maven" />
         <module name="jsd2312-ssm" />
+        <module name="_03spring" />
       </profile>
     </annotationProcessing>
   </component>
