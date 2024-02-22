@@ -17,6 +17,7 @@ public class TestUserXml {
         // context.getBean(UserXml.class).var + 回车
         UserXml userXml = context.getBean(UserXml.class);
         userXml.run();
+        System.out.println("userXml = " + userXml);
     }
 }
 
