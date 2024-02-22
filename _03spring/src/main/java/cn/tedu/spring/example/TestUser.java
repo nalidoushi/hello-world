@@ -27,6 +27,12 @@ public class TestUser {
               创建 Spring Bean 对象,将这些Bean对象放入 IoC容器;
             2.context.getBean(User.class)方法,可以从 IoC 容器中获取指定类型的Bean对象;
             3.user3.run():用于测试
+         复制路径快捷键:
+            1.Windows:
+              Ctrl + Shift + Alt + c
+              Fn + Ctrl + Shift + Alt + c
+            2.Mac:
+              Command + Shift + c
          */
         ApplicationContext context = new AnnotationConfigApplicationContext("cn.tedu.spring.example");
         User user3 = context.getBean(User.class);
