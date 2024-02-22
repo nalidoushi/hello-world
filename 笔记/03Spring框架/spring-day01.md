@@ -1,3 +1,5 @@
+[toc]
+
 ### 1 框架
 
 <font color=red>**让程序员专注于业务逻辑, 进而提升开发效率.**</font>
@@ -70,30 +72,18 @@
 
 
 
-### 步骤
+### 5 今日单词
 
-* 第1步：添加 `Spring Framework` 依赖，刷新 `Maven`；
-* 第2步：创建 `Java` 类；
-* 第3步：通知框架帮我们创建对象；
-* 第4步：获取对象并直接使用.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* Spring Framework
+* ApplicationContext
+* AnnotationConfigApplicationContext
+* ClasspathXmlApplicationContext
+* Component
+* Controller
+* Serivce
+* Repository
+* bean
+* property
 
 
 
