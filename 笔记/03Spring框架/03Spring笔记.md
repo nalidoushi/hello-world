@@ -539,19 +539,19 @@ User user = context.getBean(类名.class);
 
 ##### 6.2.2.3 练习
 
-* **工程目录下 `cn.tedu.spring` 创建包 `eg3`；**
+* 工程目录下 `cn.tedu.spring` 创建包 `eg3`；
 
-* **创建接口：`Mapper`;**
+* 创建接口：`Mapper`;
 
-* **创建接口实现类：`MapperImpl1` ，并将此类交由 `Spring` 框架管理；**
+* 创建接口实现类：`MapperImpl1` ，并将此类交由 `Spring` 框架管理；
 
-* **创建控制器类：`CommentMapper`，通过接口方式注入 `Mapper` 对象；**
+* 创建控制器类：`CommentMapper`，通过接口方式注入 `Mapper` 对象；
 
-* **创建测试类  `TestMapper` ，进行 `Spring Bean` 对象的创建及依赖注入测试；**
+* 创建测试类  `TestMapper` ，进行 `Spring Bean` 对象的创建及依赖注入测试；
 
-* **创建实现类 `MapperImpl2`，并将此类交由 `Spring` 框架管理，进行测试。**
+* 创建实现类 `MapperImpl2`，并将此类交由 `Spring` 框架管理，进行测试。
 
-* **通过 `@Qualifier` 注解实现依赖注入.**
+* 通过 `@Qualifier` 注解实现依赖注入.
 
 
 #### 6.2.3 @Qualifier注解
