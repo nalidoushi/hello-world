@@ -9,6 +9,7 @@
 * 第1个: **git-day01.pdf**
 * 第2个: **maven-day01.pdf**
 * 第3个: **spring-day01.pdf**
+* 第4个: **注解大全**
 
 ### 作业2：
 
@@ -21,9 +22,8 @@
 
 把之前的作业重做一遍,包括:
 
-* git-homework1.pdf
-* maven-homework1.pdf
-* spring-homework1.pdf
+* **git-homework1.pdf**
+* **maven-homework1.pdf**
 
 ### 作业4：
 

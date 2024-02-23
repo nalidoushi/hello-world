@@ -164,9 +164,38 @@
 - 第4步: 使用, 通过 `context.getBean(类名.class);`
 - 第5步: 销毁, 通过 `@PreDestroy` 注解执行Bean对象销毁之前的方法.
 
+### 7 引入外部属性文件
 
+#### 7.1 操作步骤
 
+- 第1步：创建配置文件，放在`resources`目录下，并且以 `.properties .yml .yaml` 结尾；
+- 第2步：通过 `@PropertySource("配置文件路径")` 引入配置文件；
+- 第3步：通过 `${配置名称}` 获取具体的配置.
 
+#### 7.2 操作示例
+
+* 第1步: 创建配置文件 **resources/application.properties**
+
+  ```properties
+  spring.datasource.url=jdbc:mysql://localhost:3306/tedu
+  spring.datasource.username=root
+  spring.datasource.password=root
+  ```
+
+* 第2步: 通过 **@PropertySource()** 注解引入外部文件
+
+  ```java
+  @PropertySource(value = "classpath:application.properties")
+  ```
+
+* 第3步: 通过 **@Value()** 注解进行依赖注入, 注意 **${}**
+
+  ```java
+  @Value("${spring.datasource.url}")
+  private String url;
+  ```
+
+* 第4步: 测试 **TestDatabase** 进行测试
 
 ### 8 今日单词
 
@@ -180,10 +209,18 @@
 * Repository
 * bean
 * property
+* Value
+* Autowired
+* Qualifier
+* Resource
+* PostConstruct
+* PreDestroy
+* PropertySource
+* Scope
+* singleton
+* prototype
 
-
-
-###  常见异常
+###  9 常见异常
 
 - `NoSuchBeanDefinitionException`
 
@@ -191,7 +228,7 @@
   org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.tedu.spring.bean.UserService' available ...
   ```
 
-  **解决方案：**
+  <font color=red>**解决方案：**</font>
 
   - 查看该类上是否添加标识为 `Spring` 组件的注解；
   - 检查相关注解 `Spring Bean` 对象的名称是否一致；
@@ -202,15 +239,19 @@
   Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'cn.tedu.spring.auto.Cache' available: expected single matching bean but found 2: AAAA,cacheImpl2
   ```
 
-  **解决方案：**
+  <font color=red>**解决方案：**</font>
 
   一个接口有多个实现类，通过 `@Qualifier` 或者 `@Resource` 注解指定唯一的 `Bean` 对象的名称.
 
+- `FileNotFoundException`
 
+  ```java
+  Caused by: java.io.FileNotFoundException: class path resource [application.propertise] cannot be opened because it does not exist
+  ```
 
+  <font color=red>**解决方案：**</font>
 
-
-
+  检查文件名和具体路径.
 
 
 
