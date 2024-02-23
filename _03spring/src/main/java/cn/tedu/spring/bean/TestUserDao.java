@@ -8,7 +8,7 @@ public class TestUserDao {
         // Ctrl + Shift + Alt + c
         ApplicationContext context = new AnnotationConfigApplicationContext("cn.tedu.spring.bean");
         // .var + 回车
-        UserDao userDao = context.getBean(UserDao.class);
-        System.out.println("userDao = " + userDao);
+        UserSerive userSerive = context.getBean(UserSerive.class);
+        System.out.println("userSerive = " + userSerive);
     }
 }
