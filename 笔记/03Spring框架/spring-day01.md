@@ -109,7 +109,11 @@
 
   对象类型或者接口类型依赖注入，默认根据 **类型** 进行装配；
 
+- `@Qualifier`
 
+  根据 `Spring Bean`对象的名称进行注入, 经常配合 `@Autowired` 注解一起使用;
+
+  当一个接口有多个实现类时, 可以通过 `@Qualifier(value="Bean对象名称")` 指定需要注入的对象.
 
 
 
@@ -130,7 +134,28 @@
 
 
 
+###  常见异常
 
+- `NoSuchBeanDefinitionException`
+
+  ```java
+  org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.tedu.spring.bean.UserService' available ...
+  ```
+
+  **解决方案：**
+
+  - 查看该类上是否添加标识为 `Spring` 组件的注解；
+  - 检查相关注解 `Spring Bean` 对象的名称是否一致；
+
+- `NoUniqueBeanDefinitionException`
+
+  ```java
+  Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'cn.tedu.spring.auto.Cache' available: expected single matching bean but found 2: AAAA,cacheImpl2
+  ```
+
+  **解决方案：**
+
+  一个接口有多个实现类，通过 `@Qualifier` 或者 `@Resource` 注解指定唯一的 `Bean` 对象的名称.
 
 
 
