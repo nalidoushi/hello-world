@@ -78,16 +78,38 @@
 
   <font color=red>**IoC是控制反转思想, IoC容器和DI依赖注入是实现IoC控制反转思想的两种技术手段.**</font>
 
-### 5 相关注解
+### 5 常用注解
 
-#### 5.1 标识为Spring组件
+#### 5.1 标识为Spring Bean注解
 
-* Component
-* Controller
-* Service
-* Repository
+- Component
+  - 添加在类上，创建Spring Bean对象；
+  - 不分层。
+- Controller
+  - 添加在类上，创建Spring Bean对象；
+  - 控制器层：负责接收请求并返回响应。
+- Service
+  - 添加在类上，创建Spring Bean对象；
+  - 业务层：负责具体业务逻辑处理。
+- Repository
+  - 添加在类上，创建Spring Bean对象；
+  - 数据访问层：负责和数据库[**MySQL和MariaDB**]交互。
 
-#### 5.2 依赖注入
+#### 5.2 DI依赖注入注解
+
+- `@Value`
+
+  <font color=red>**2个位置**</font>：添加在属性上, set方法上
+
+  简单类型依赖注入.
+
+- `@Autowired`
+
+  <font color=red>**3个位置**</font>：添加在属性上，添加在set方法上，构造方法上；
+
+  对象类型或者接口类型依赖注入，默认根据 **类型** 进行装配；
+
+
 
 
 
