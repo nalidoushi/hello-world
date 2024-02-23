@@ -115,7 +115,25 @@
 
   当一个接口有多个实现类时, 可以通过 `@Qualifier(value="Bean对象名称")` 指定需要注入的对象.
 
+- `@Resource`
 
+  对象类型属性值注入;
+
+  <font color=red>**@Autowired注解和@Resource注解的区别**</font>
+
+  - `@Resource` 注解是JDK的标准注解, `@Autowired` 注解是Spring框架的注解;
+
+  - 装配规则
+
+    - `@Autowired` 注解默认根据类型进行装配, 如果需要根据名称进行装配, 结合 `@Qualifier` 注解;
+
+    - `@Resource` 注解
+
+      1. 默认根据名称进行装配[`@Resource` 注解的 `name` 参数];
+
+      2. 如果未指定 `name` 参数, 则以 属性名作为`Bean`对象名称进行装配;
+
+      3. 如果属性名和`Bean`对象名称也不一致, 则根据类型进行装配.
 
 
 
