@@ -135,6 +135,17 @@
 
       3. 如果属性名和`Bean`对象名称也不一致, 则根据类型进行装配.
 
+#### 5.3 作用域注解
+
+- `@scope`
+
+  作用域注解
+
+  - singleton: 单例模式[<font color=red>**默认**</font>],Bean对象只有1个, 创建IoC容器时,创建Bean对象;
+  - prototype: 多例模式,Bean对象有多个, 每次在IoC容器中获取Bean对象时[getBean(类名.class)], 才会创建Bean对象
+
+  <font color=red>**平时写项目时,使用框架的单例模式.**</font>
+
 
 
 ### 6 今日单词
@@ -174,6 +185,16 @@
   **解决方案：**
 
   一个接口有多个实现类，通过 `@Qualifier` 或者 `@Resource` 注解指定唯一的 `Bean` 对象的名称.
+
+
+
+
+
+
+
+
+
+
 
 
 
