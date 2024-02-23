@@ -26,13 +26,21 @@
 
 - 第1步: 添加依赖, 刷新 `maven`;
 
-- 第2步: 在指定类上添加注解: `@Component`
+  ```xml
+  <dependency>
+  	<groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>5.3.24</version>
+  </dependency>
+  ```
+
+- 第2步: 在指定类上添加相关注解: `@Component,@Controller,@Service,@Repository`
 
 - 第3步: 创建测试类
 
   ```java
   //1.创建IoC容器;
-  ApplicationContext context = new AnnotationConfigApplicationContext("包路径");
+  ApplicationContext context = new AnnotationConfigApplicationContext("包扫描路径");
   //2.获取Bean;
   context.getBean(类型.class);
   ```
@@ -57,7 +65,7 @@
 
   实现IoC控制反转思想的一种技术手段.
 
-  创建IoC容器
+  <font color=red>**创建IoC容器: 通过 `ApplicationContext` 接口实现**</font>
 
   ```java
   ApplicationContext context = new AnnotationConfigApplicationContext("包路径");
@@ -70,9 +78,22 @@
 
   <font color=red>**IoC是控制反转思想, IoC容器和DI依赖注入是实现IoC控制反转思想的两种技术手段.**</font>
 
+### 5 相关注解
+
+#### 5.1 标识为Spring组件
+
+* Component
+* Controller
+* Service
+* Repository
+
+#### 5.2 依赖注入
 
 
-### 5 今日单词
+
+
+
+### 6 今日单词
 
 * Spring Framework
 * ApplicationContext
