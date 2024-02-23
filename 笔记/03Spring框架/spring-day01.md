@@ -146,15 +146,29 @@
 
   <font color=red>**平时写项目时,使用框架的单例模式.**</font>
 
+#### 5.4 生命周期注解
+
+- `@PostConstruct`
+
+  生命周期初始化方法，在对象构建以后执行；
+
+- `@PreDestroy`
+
+  生命周期销毁方法，比如此对象存储到了IoC容器，那这个对象在IoC容器关闭之前会先执行这个生命周期的销毁方法。
+
+### 6 Bean对象生命周期
+
+- 第1步: 实例化, 通过 `构造方法` 实现;
+- 第2步: 属性赋值, 通过 `set方法` 实现;
+- 第3步: 初始化, 通过`@PostConstruct` 注解执行初始化的方法;
+- 第4步: 使用, 通过 `context.getBean(类名.class);`
+- 第5步: 销毁, 通过 `@PreDestroy` 注解执行Bean对象销毁之前的方法.
 
 
 
 
 
-
-
-
-### 6 今日单词
+### 8 今日单词
 
 * Spring Framework
 * ApplicationContext

@@ -601,9 +601,9 @@ User user = context.getBean(类名.class);
 
   **而@Autowired注解默认根据类型装配byType，如果想根据名称匹配，需要配合@Qualifier注解一起使用。**
 
-* <font color=red>**课堂示例**</font>
+  <font color=red>**课堂示例**</font>
 
-  * 包名：`resource`
+* 包名：`resource`
 
 
   * 接口：`ResMapper`
@@ -622,12 +622,11 @@ User user = context.getBean(类名.class);
 
 
 * <font color=red>**总结**</font>
-
-  * 指定 `@Resource` 中的 `name`，则根据名称装配；
-
-  * 未指定 `name` 时，则根据属性名装配；
-
-  * 未指定 `name`，属性名也不一致，则根据类型装配.
+* 指定 `@Resource` 中的 `name`，则根据名称装配；
+  
+* 未指定 `name` 时，则根据属性名装配；
+  
+* 未指定 `name`，属性名也不一致，则根据类型装配.
 
 ### 6.3 Bean作用域
 
